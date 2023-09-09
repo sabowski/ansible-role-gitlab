@@ -78,7 +78,7 @@
 - name: Configure ssl
   when:
     - gitlab_configuration_file is not defined
-    - gitlab_letsencrypt is defined and not gitlab_letsencrypt
+    - gitlab_letsencrypt is defined and gitlab_letsencrypt
     - '"https" in gitlab_external_url'
   block:
     - name: Make ssl directories
